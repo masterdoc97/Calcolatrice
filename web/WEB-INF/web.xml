@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <!-- Use the URL http://hostname/appname/show-time
+       for the ShowTime servlet.
+  -->
+    <servlet>
+        <servlet-name>Operazione</servlet-name>
+        <servlet-class>bo.Operazione</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Operazione</servlet-name>
+        <url-pattern>/calcola</url-pattern>
+    </servlet-mapping>
+    <!-- If URL gives a directory but no filename, try index.jsp
+       first and index.html second. If neither is found,
+       the result is server-specific (e.g., a directory 
+       listing).  
+  -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
